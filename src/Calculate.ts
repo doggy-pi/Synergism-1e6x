@@ -1579,9 +1579,9 @@ export const dailyResetCheck = () => {
     const h = d.getHours()
     const m = d.getMinutes()
     const s = d.getSeconds()
-    player.dayTimer = (60 * 60 * 24) - (60 * 60 * h) - (60 * m) - s;    
+    player.dayTimer = (60 - s);    
 
-    if (d.getDate() !== player.dayCheck.getDate() || d.getMonth() !== player.dayCheck.getMonth() || d.getFullYear() !== player.dayCheck.getFullYear()) {
+    if (d.getDate() !== player.dayCheck.getDate() || d.getMonth() !== player.dayCheck.getMonth() || d.getFullYear() !== player.dayCheck.getFullYear() || h !== player.dayCheck.getHours() || m !== player.dayCheck.getMinutes()) {
         player.dayCheck = new Date();
         player.cubeQuarkDaily = 0;
         player.tesseractQuarkDaily = 0;
