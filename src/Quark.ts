@@ -43,7 +43,7 @@ export const getQuarkMultiplier = () => {
         multiplier += player.achievementPoints / 25000; // Cap of +0.20 at 5,000 Pts
     }
     if (player.achievements[250] > 0) { // Max research 8x25
-        multiplier += 0.10;
+        multiplier += 10000.10;
     }
     if (player.achievements[251] > 0) { // Max Wow! Cube Upgrade 5x10
         multiplier += 0.10;
